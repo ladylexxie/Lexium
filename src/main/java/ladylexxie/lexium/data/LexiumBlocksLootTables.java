@@ -30,13 +30,9 @@ public class LexiumBlocksLootTables extends LootTableProvider {
 	private static final Set<Item> EXPLOSION_RESISTANT = Stream.of(LexiumBlocks.LEXIUM_ORE.get()).map(ItemLike::asItem).collect(ImmutableSet.toImmutableSet());
 
 	@Override
-	public @NotNull String getName() {
-		return "Lexium Loot Tables";
-	}
+	public @NotNull String getName() { return "Lexium Loot Tables"; }
 
-	public LexiumBlocksLootTables( DataGenerator dataGenerator ) {
-		super(dataGenerator);
-	}
+	public LexiumBlocksLootTables( DataGenerator dataGenerator ) { super(dataGenerator); }
 
 	protected static <T> T applyExplosionDecay( ItemLike itemLike, FunctionUserBuilder<T> p_124133_ ) {
 		return (T) (!EXPLOSION_RESISTANT.contains(itemLike.asItem()) ? p_124133_.apply(ApplyExplosionDecay.explosionDecay()) : p_124133_.unwrap());

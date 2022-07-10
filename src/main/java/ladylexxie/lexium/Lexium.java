@@ -34,7 +34,7 @@ public class Lexium {
     public static class LexiumDataGen{
         public static void dataGen( GatherDataEvent event ){
             event.getGenerator().addProvider(new LexiumLang(event.getGenerator()));
-            event.getGenerator().addProvider(new LexiumBlocksLootTables(event.getGenerator()));
+//            event.getGenerator().addProvider(new LexiumBlocksLootTables(event.getGenerator()));
         }
     }
 }

@@ -16,5 +16,6 @@ public class LexiumLang extends LanguageProvider {
 		addItem(LexiumItems.LEXIUM_INGOT, "Lexium Ingot");
 		addItem(LexiumItems.LEXIUM_ORE, "Lexium Ore");
 		addBlock(LexiumBlocks.LEXIUM_ORE, "Lexium Ore");
+		add("itemGroup.lexium_creative_tab", "Lexium");
 	}
 }
