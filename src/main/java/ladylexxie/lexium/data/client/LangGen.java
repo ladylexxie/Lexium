@@ -5,6 +5,7 @@ import ladylexxie.lexium.blocks.LexiumBlocks;
 import ladylexxie.lexium.items.LexiumItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
+import org.jetbrains.annotations.NotNull;
 
 public class LangGen extends LanguageProvider {
 	public LangGen( DataGenerator gen ) {
@@ -27,4 +28,9 @@ public class LangGen extends LanguageProvider {
 	}
 
 	private void addLexiumTooltip( String id, String lang ) { add("tooltip.lexium." + id, lang); }
+
+	@Override
+	public @NotNull String getName() {
+		return "Lexium Lang Datagen";
+	}
 }

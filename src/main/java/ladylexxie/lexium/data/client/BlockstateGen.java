@@ -5,6 +5,7 @@ import ladylexxie.lexium.blocks.LexiumBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
 
 public class BlockstateGen extends BlockStateProvider {
 	public BlockstateGen( DataGenerator gen, ExistingFileHelper exFileHelper ) {
@@ -16,5 +17,10 @@ public class BlockstateGen extends BlockStateProvider {
 		Lexium.LOGGER.debug("Generating blockstate files...");
 		simpleBlock(LexiumBlocks.LEXIUM_ORE.get());
 		simpleBlock(LexiumBlocks.LEXIUM_BLOCK.get());
+	}
+
+	@Override
+	public @NotNull String getName() {
+		return "Lexium Blockstate Datagen";
 	}
 }

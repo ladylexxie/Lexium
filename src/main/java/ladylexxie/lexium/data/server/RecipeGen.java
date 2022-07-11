@@ -31,4 +31,9 @@ public class RecipeGen extends RecipeProvider {
 				.unlockedBy("has_lexium_ore", has(LexiumItems.LEXIUM_ORE.get()))
 				.save(consumer);
 	}
+
+	@Override
+	public @NotNull String getName() {
+		return "Lexium Recipe Datagen";
+	}
 }

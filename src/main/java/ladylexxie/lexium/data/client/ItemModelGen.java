@@ -8,6 +8,7 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
 
 public class ItemModelGen extends ItemModelProvider {
 	public ItemModelGen( DataGenerator generator, ExistingFileHelper existingFileHelper ) {
@@ -25,5 +26,10 @@ public class ItemModelGen extends ItemModelProvider {
 	private void basicBlockItem( Item block ) {
 		String name = Registry.ITEM.getKey(block).getPath();
 		getBuilder(name).parent(new ModelFile.UncheckedModelFile("lexium:block/" + name));
+	}
+
+	@Override
+	public @NotNull String getName() {
+		return "Lexium Item Model Datagen";
 	}
 }
