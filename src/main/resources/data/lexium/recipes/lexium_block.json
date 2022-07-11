@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "lexium:lexium_ingot"
+    }
+  },
+  "result": {
+    "item": "lexium:lexium_block"
+  }
+}

@@ -13,4 +13,5 @@ public class LexiumBlocks {
 	public static void register( IEventBus bus ) { BLOCKS.register(bus); }
 
 	public static final RegistryObject<Block> LEXIUM_ORE = BLOCKS.register("lexium_ore", LexiumOreBlock::new);
+	public static final RegistryObject<Block> LEXIUM_BLOCK = BLOCKS.register("lexium_block", LexiumBlock::new);
 }

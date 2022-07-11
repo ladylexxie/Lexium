@@ -23,6 +23,6 @@ public class LexiumIngot extends Item {
 
 	@Override
 	public void appendHoverText( @NotNull ItemStack stack, Level level, List<Component> list, TooltipFlag flags ) {
-		list.add(new TranslatableComponent("tooltip.lexium_ingot"));
+		list.add(new TranslatableComponent("tooltip.lexium.lexium_ingot"));
 	}
 }

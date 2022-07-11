@@ -11,16 +11,16 @@ import net.minecraft.world.level.material.Material;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class LexiumOreBlock extends Block {
-	public LexiumOreBlock() {
-		super(Properties.of(Material.STONE)
-				.strength(3.0f)
+public class LexiumBlock extends Block {
+	public LexiumBlock() {
+		super(Properties.of(Material.HEAVY_METAL)
+				.strength(5.0f, 1200.0f)
 				.requiresCorrectToolForDrops()
 		);
 	}
 
 	@Override
 	public void appendHoverText( ItemStack stack, @Nullable BlockGetter reader, List<Component> list, TooltipFlag flags ) {
-		list.add(new TranslatableComponent("tooltip.lexium.lexium_ore"));
+		list.add(new TranslatableComponent("tooltip.lexium.lexium_block"));
 	}
 }
