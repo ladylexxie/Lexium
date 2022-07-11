@@ -19,6 +19,7 @@ public class ItemModelGen extends ItemModelProvider {
 	protected void registerModels() {
 		Lexium.LOGGER.debug("Generating item model files...");
 		basicItem(LexiumItems.LEXIUM_INGOT.get());
+		basicItem(LexiumItems.LEXIUM_SWORD.get());
 		basicBlockItem(LexiumItems.LEXIUM_ORE.get());
 		basicBlockItem(LexiumItems.LEXIUM_BLOCK.get());
 	}

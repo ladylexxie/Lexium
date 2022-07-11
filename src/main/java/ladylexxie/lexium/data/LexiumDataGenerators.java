@@ -4,6 +4,7 @@ import ladylexxie.lexium.Lexium;
 import ladylexxie.lexium.data.client.BlockstateGen;
 import ladylexxie.lexium.data.client.ItemModelGen;
 import ladylexxie.lexium.data.client.LangGen;
+import ladylexxie.lexium.data.server.LootTableGen;
 import ladylexxie.lexium.data.server.RecipeGen;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -23,6 +24,7 @@ public class LexiumDataGenerators {
 		}
 		if( event.includeServer() ) {
 			generator.addProvider(new RecipeGen(generator));
+			generator.addProvider(new LootTableGen(generator));
 		}
 	}
 }

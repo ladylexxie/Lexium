@@ -19,6 +19,7 @@ public class LexiumItems {
 	}
 
 	public static final RegistryObject<LexiumIngot> LEXIUM_INGOT = ITEMS.register("lexium_ingot", LexiumIngot::new);
+	public static final RegistryObject<LexiumSword> LEXIUM_SWORD = ITEMS.register("lexium_sword", LexiumSword::new);
 
 	public static final RegistryObject<Item> LEXIUM_ORE = ITEMS.register("lexium_ore", () -> new BlockItem(LexiumBlocks.LEXIUM_ORE.get(), new Item.Properties().tab(LexiumCreativeTab.TAB).rarity(Rarity.EPIC)));
 	public static final RegistryObject<Item> LEXIUM_BLOCK = ITEMS.register("lexium_block", () -> new BlockItem(LexiumBlocks.LEXIUM_BLOCK.get(), new Item.Properties().tab(LexiumCreativeTab.TAB).rarity(Rarity.EPIC)));

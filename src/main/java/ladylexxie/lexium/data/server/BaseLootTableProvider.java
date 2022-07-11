@@ -44,21 +44,12 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
 
 	protected abstract void addTables();
 
-	protected LootTable.Builder createStandardTable( String name, Block block, BlockEntityType<?> type ) {
+	protected LootTable.Builder createStandardTable( String name, Block block ) {
 		LootPool.Builder builder = LootPool
 				.lootPool()
 				.name(name)
 				.setRolls(ConstantValue.exactly(1))
-				.add(LootItem
-						.lootTableItem(block)
-						.apply(CopyNameFunction.copyName(CopyNameFunction.NameSource.BLOCK_ENTITY))
-						.apply(CopyNbtFunction.copyData(ContextNbtProvider.BLOCK_ENTITY)
-								.copy("inv", "BlockEntityTag.inv", CopyNbtFunction.MergeStrategy.REPLACE)
-								.copy("energy", "BlockEntityTag.energy", CopyNbtFunction.MergeStrategy.REPLACE))
-						.apply(SetContainerContents.setContents(type)
-								.withEntry(DynamicLoot.dynamicEntry(new ResourceLocation("minecraft", "contents")))
-						)
-				);
+				.add(LootItem.lootTableItem(block));
 		return LootTable.lootTable().withPool(builder);
 	}
 
