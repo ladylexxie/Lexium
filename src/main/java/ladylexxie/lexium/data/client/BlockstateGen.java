@@ -16,12 +16,14 @@ public class BlockstateGen extends BlockStateProvider {
 
 	@Override
 	protected void registerStatesAndModels() {
+		Lexium.LOGGER.debug("Generating blockstate files...");
 		simpleBlock(LexiumBlocks.LEXIUM_ORE.get());
-		basicBlock(LexiumBlocks.LEXIUM_BLOCK.get());
+		simpleBlock(LexiumBlocks.LEXIUM_BLOCK.get());
+//		basicBlock(LexiumBlocks.LEXIUM_BLOCK.get());
 	}
 
-	private void basicBlock( Block block ) {
-		String name = Registry.BLOCK.getKey(block).getPath();
-		simpleBlock(LexiumBlocks.LEXIUM_BLOCK.get(), models().cubeAll(name, new ResourceLocation(Lexium.MOD_ID, "block/" + name)));
-	}
+//	private void basicBlock( Block block ) {
+//		String name = Registry.BLOCK.getKey(block).getPath();
+//		simpleBlock(LexiumBlocks.LEXIUM_BLOCK.get(), models().cubeAll(name, new ResourceLocation(Lexium.MOD_ID, "block/" + name)));
+//	}
 }

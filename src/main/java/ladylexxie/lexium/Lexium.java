@@ -13,7 +13,7 @@ import org.slf4j.Logger;
 public class Lexium {
     public static final String MOD_ID = "lexium";
     public static final String MOD_NAME = "Lexium";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public Lexium(){
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();

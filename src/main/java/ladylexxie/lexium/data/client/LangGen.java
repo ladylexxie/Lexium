@@ -13,9 +13,8 @@ public class LangGen extends LanguageProvider {
 
 	@Override
 	protected void addTranslations() {
+		Lexium.LOGGER.debug("Generating lang files...");
 		add(LexiumItems.LEXIUM_INGOT.get(), "Lexium Ingot");
-//		add(LexiumItems.LEXIUM_BLOCK.get(), "Lexium Block");
-//		add(LexiumItems.LEXIUM_ORE.get(), "Lexium Ore");
 
 		add(LexiumBlocks.LEXIUM_ORE.get(), "Lexium Ore");
 		add(LexiumBlocks.LEXIUM_BLOCK.get(), "Lexium Block");

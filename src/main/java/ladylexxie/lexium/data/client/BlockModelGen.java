@@ -15,6 +15,7 @@ public class BlockModelGen extends BlockModelProvider {
 
 	@Override
 	protected void registerModels() {
+		Lexium.LOGGER.debug("Generating block model files...");
 		basicBlock(LexiumBlocks.LEXIUM_ORE.get());
 		basicBlock(LexiumBlocks.LEXIUM_BLOCK.get());
 	}
