@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "lexium:lexium_ore"
-  },
-  "result": "lexium:lexium_ingot"
-}

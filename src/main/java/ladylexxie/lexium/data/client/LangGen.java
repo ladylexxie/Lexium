@@ -1,4 +1,4 @@
-package ladylexxie.lexium.data;
+package ladylexxie.lexium.data.client;
 
 import ladylexxie.lexium.Lexium;
 import ladylexxie.lexium.blocks.LexiumBlocks;
@@ -14,8 +14,8 @@ public class LangGen extends LanguageProvider {
 	@Override
 	protected void addTranslations() {
 		add(LexiumItems.LEXIUM_INGOT.get(), "Lexium Ingot");
-		add(LexiumItems.LEXIUM_BLOCK.get(), "Lexium Block");
-		add(LexiumItems.LEXIUM_ORE.get(), "Lexium Ore");
+//		add(LexiumItems.LEXIUM_BLOCK.get(), "Lexium Block");
+//		add(LexiumItems.LEXIUM_ORE.get(), "Lexium Ore");
 
 		add(LexiumBlocks.LEXIUM_ORE.get(), "Lexium Ore");
 		add(LexiumBlocks.LEXIUM_BLOCK.get(), "Lexium Block");
