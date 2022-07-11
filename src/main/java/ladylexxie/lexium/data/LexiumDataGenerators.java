@@ -19,7 +19,7 @@ public class LexiumDataGenerators {
 		Lexium.LOGGER.debug("Starting data generators...");
 		if( event.includeClient() ) {
 			generator.addProvider(new LangGen(generator));
-			generator.addProvider(new BlockstateGen(generator, event.getExistingFileHelper()));
+//			generator.addProvider(new BlockstateGen(generator, event.getExistingFileHelper()));
 			generator.addProvider(new ItemModelGen(generator, event.getExistingFileHelper()));
 			//			generator.addProvider(new BlockModelGen(generator, event.getExistingFileHelper()));
 		}

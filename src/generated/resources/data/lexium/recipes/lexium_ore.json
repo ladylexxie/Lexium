@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "lexium:lexium_ingot"
-  },
-  "result": "lexium:lexium_ore",
-  "experience": 0.3,
-  "cookingtime": 200
-}
