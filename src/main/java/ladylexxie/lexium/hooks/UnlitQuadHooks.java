@@ -37,29 +37,11 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 
-/**
- * Implementation details of allowing quads to be defined as "unlit" in JSON models by specifying an "unlit" boolean
- * property on the face.
- */
 public class UnlitQuadHooks {
-
-	/**
-	 * Offset into the vertex data (which is represented as integers).
-	 */
 	private static final int LIGHT_OFFSET = getLightOffset();
-
-	// Lightmap texture coordinate with full intensity light leading to no drop in
-	// brightness
 	private static final int UNLIT_LIGHT_UV = LightTexture.pack(15, 15);
-
-	/**
-	 * Thread-Local flag to indicate that an enhanced Applied Energistics model is currently being deserialized.
-	 */
 	private static final ThreadLocal<Boolean> ENABLE_UNLIT_EXTENSIONS = new ThreadLocal<>();
 
-	/**
-	 * Notify the unlit model system that a specific model is about to be deserialized by {@link ModelBakery}.
-	 */
 	public static void beginDeserializingModel( ResourceLocation location ) {
 		String namespace = location.getNamespace();
 		if( namespace.equals(Lexium.MOD_ID) ) {
@@ -67,9 +49,6 @@ public class UnlitQuadHooks {
 		}
 	}
 
-	/**
-	 * Notify the unlit model system that deserialization of a model has ended.
-	 */
 	public static void endDeserializingModel() {
 		ENABLE_UNLIT_EXTENSIONS.set(false);
 	}
@@ -87,55 +66,35 @@ public class UnlitQuadHooks {
 		return modelElement;
 	}
 
-	/**
-	 * Creates a new quad from the given quad and pre-bakes it to not be affected by lighting (neither diffuse lighting
-	 * nor the prebaked lightmap). This works on the assumption that Vanilla will not modify a quad's lightmap data if
-	 * it's not zero.
-	 */
 	public static BakedQuad makeUnlit( BakedQuad quad ) {
 		int[] vertexData = quad.getVertices().clone();
 		int stride = DefaultVertexFormat.BLOCK.getIntegerSize();
-		// Set the pre-baked texture coords for the lightmap.
-		// Vanilla will not overwrite them if they are non-zero
 		for( int i = 0; i < 4; i++ ) {
 			vertexData[stride * i + LIGHT_OFFSET] = UNLIT_LIGHT_UV;
 		}
 		TextureAtlasSprite sprite = ((BakedQuadAccessor) quad).getSprite();
-		// Copy the quad to disable diffuse lighting
-		return new BakedQuad(vertexData, quad.getTintIndex(), quad.getDirection(), sprite, false /* diffuse lighting */);
+		return new BakedQuad(vertexData, quad.getTintIndex(), quad.getDirection(), sprite, false);
 	}
 
-	/**
-	 * This subclass is used as a marker to indicate this face deserialized from JSON is supposed to be unlit, which
-	 * translates to processing by {@link #makeUnlit(BakedQuad)}.
-	 */
 	public static class UnlitBlockPartFace extends BlockElementFace {
 		public UnlitBlockPartFace( Direction cullFaceIn, int tintIndexIn, String textureIn, BlockFaceUV blockFaceUVIn ) {
 			super(cullFaceIn, tintIndexIn, textureIn, blockFaceUVIn);
 		}
 	}
 
-	/**
-	 * Find the index in the BakedQuad vertex data (for vertex 0) where the lightmap coordinates are. Assumes the BLOCK
-	 * vertex format.
-	 */
 	private static int getLightOffset() {
 		VertexFormat format = DefaultVertexFormat.BLOCK;
 		int offset = 0;
 		for( VertexFormatElement element : format.getElements() ) {
-			// TEX_2SB is the lightmap vertex element
 			if( element == DefaultVertexFormat.ELEMENT_UV2 ) {
-				if( element.getType() != Type.SHORT ) {
+				if( element.getType() != Type.SHORT )
 					throw new UnsupportedOperationException("Expected light map format to be of type SHORT");
-				}
-				if( offset % 4 != 0 ) {
+				if( offset % 4 != 0 )
 					throw new UnsupportedOperationException("Expected light map offset to be 4-byte aligned");
-				}
 				return offset / 4;
 			}
 			offset += element.getByteSize();
 		}
 		throw new UnsupportedOperationException("Failed to find the lightmap index in the block vertex format");
 	}
-
 }
