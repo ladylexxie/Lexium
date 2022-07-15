@@ -5,6 +5,7 @@ import com.google.gson.JsonObject;
 import com.mojang.blaze3d.vertex.DefaultVertexFormat;
 import com.mojang.blaze3d.vertex.VertexFormat;
 import com.mojang.blaze3d.vertex.VertexFormatElement;
+import com.mojang.blaze3d.vertex.VertexFormatElement.Type;
 import ladylexxie.lexium.Lexium;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.block.model.BakedQuad;
@@ -65,7 +66,7 @@ public class UnlitQuadHooks {
 		int offset = 0;
 		for( VertexFormatElement element : format.getElements() ) {
 			if( element == DefaultVertexFormat.ELEMENT_UV2 ) {
-				if( element.getType() != VertexFormatElement.Type.SHORT ) {
+				if( element.getType() != Type.SHORT ) {
 					throw new UnsupportedOperationException("Expected light map format to be of type SHORT");
 				}
 				if( offset % 4 != 0 ) {

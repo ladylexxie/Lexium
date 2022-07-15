@@ -5,7 +5,10 @@
   "refmap": "lexium.refmap.json",
   "compatibilityLevel": "JAVA_17",
   "client": [
-    "BakedQuadAccessor"
+    "BakedQuadAccessor",
+    "ModelBakeryMixin",
+    "BlockModelMixin",
+    "BlockPartFaceDeserializerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
