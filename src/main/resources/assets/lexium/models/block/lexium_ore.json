@@ -2,7 +2,8 @@
   "parent": "block/block",
   "textures": {
     "ore": "lexium:block/lexium_ore",
-    "light": "lexium:block/lexium_ore_lights"
+    "light": "lexium:block/lexium_ore_lights",
+    "particle": "lexium:block/lexium_ore_item"
   },
   "elements": [
     {

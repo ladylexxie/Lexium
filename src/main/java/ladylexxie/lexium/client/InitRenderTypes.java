@@ -11,7 +11,6 @@ public final class InitRenderTypes {
 	private InitRenderTypes() { }
 
 	public static void init() {
-		System.out.println("BOOBS");
 		ItemBlockRenderTypes.setRenderLayer(LexiumBlocks.LEXIUM_ORE.get(), RenderType.cutout());
 	}
 }
