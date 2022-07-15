@@ -13,30 +13,13 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
-public class RecipeGen extends RecipeProvider {
-	public RecipeGen( DataGenerator generator ) {
+public class SmeltingRecipeGen extends RecipeProvider {
+	public SmeltingRecipeGen( DataGenerator generator ) {
 		super(generator);
 	}
 
 	@Override
 	protected void buildCraftingRecipes( @NotNull Consumer<FinishedRecipe> consumer) {
-		ShapedRecipeBuilder.shaped(LexiumItems.LEXIUM_SWORD.get())
-				.pattern("x")
-				.pattern("x")
-				.pattern("s")
-				.define('x', LexiumItems.LEXIUM_INGOT.get())
-				.define('s', Items.STICK)
-				.unlockedBy("has_lexium_sword", InventoryChangeTrigger.TriggerInstance.hasItems(LexiumItems.LEXIUM_INGOT.get()))
-				.save(consumer);
-
-		ShapedRecipeBuilder.shaped(LexiumItems.LEXIUM_BLOCK.get())
-				.pattern("xxx")
-				.pattern("xxx")
-				.pattern("xxx")
-				.define('x', LexiumItems.LEXIUM_INGOT.get())
-				.unlockedBy("has_lexium_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(LexiumItems.LEXIUM_INGOT.get()))
-				.save(consumer);
-
 		SimpleCookingRecipeBuilder.smelting(Ingredient.of(LexiumItems.LEXIUM_INGOT.get()), LexiumItems.LEXIUM_ORE.get(), 0.3f, 200)
 				.unlockedBy("has_lexium_ore", has(LexiumItems.LEXIUM_ORE.get()))
 				.save(consumer);
@@ -44,6 +27,6 @@ public class RecipeGen extends RecipeProvider {
 
 	@Override
 	public @NotNull String getName() {
-		return "Lexium Recipe Datagen";
+		return "Lexium Smelting Recipe Datagen";
 	}
 }

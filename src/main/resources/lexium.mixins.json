@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8.4",
+  "package": "ladylexxie.lexium.mixins",
+  "refmap": "lexium.refmap.json",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "BakedQuadAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -15,7 +15,7 @@ public class BlockstateGen extends BlockStateProvider {
 	@Override
 	protected void registerStatesAndModels() {
 		Lexium.LOGGER.debug("Generating blockstate files...");
-		simpleBlock(LexiumBlocks.LEXIUM_ORE.get());
+//		simpleBlock(LexiumBlocks.LEXIUM_ORE.get());
 		simpleBlock(LexiumBlocks.LEXIUM_BLOCK.get());
 	}
 

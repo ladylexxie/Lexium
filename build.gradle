@@ -13,11 +13,11 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-//mixin {
-//    add sourceSets.main, "${mod_id}.refmap.json"
-//    config "${mod_id}.mixins.json"
-//    debug.export = true
-//}
+mixin {
+    add sourceSets.main, "${mod_id}.refmap.json"
+    config "${mod_id}.mixins.json"
+    debug.export = true
+}
 
 version = "${mc_version}-${mod_version}"
 group = "ladylexxie.${mod_id}"

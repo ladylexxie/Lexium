@@ -1,0 +1,76 @@
+{
+  "textures": {
+    "ore": "lexium:block/lexium_ore",
+    "light": "lexium:block/lexium_ore_lights"
+  },
+  "ambientocclusion": false,
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "texture": "#light",
+          "uv": [0, 0, 16, 16],
+          "unlit": true
+        },
+        "up": {
+          "texture": "#light",
+          "uv": [0, 0, 16, 16],
+          "unlit": true
+        },
+        "east": {
+          "texture": "#light",
+          "uv": [0, 0, 16, 16],
+          "unlit": true
+        },
+        "west": {
+          "texture": "#light",
+          "uv": [0, 0, 16, 16],
+          "unlit": true
+        },
+        "north": {
+          "texture": "#light",
+          "uv": [0, 0, 16, 16],
+          "unlit": true
+        },
+        "south": {
+          "texture": "#light",
+          "uv": [0, 0, 16, 16],
+          "unlit": true
+        }
+      },
+      "from": [0, 0, 0],
+      "to": [16, 16, 16],
+      "shade": false
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#ore",
+          "uv": [0, 0, 16, 16]
+        },
+        "up": {
+          "texture": "#ore",
+          "uv": [0, 0, 16, 16]
+        },
+        "east": {
+          "texture": "#ore",
+          "uv": [0, 0, 16, 16]
+        },
+        "west": {
+          "texture": "#ore",
+          "uv": [0, 0, 16, 16]
+        },
+        "north": {
+          "texture": "#ore",
+          "uv": [0, 0, 16, 16]
+        },
+        "south": {
+          "texture": "#ore",
+          "uv": [0, 0, 16, 16]
+        }
+      },
+      "from": [0, 0, 0],
+      "to": [16, 16, 16]
+    }
+  ]
+}
