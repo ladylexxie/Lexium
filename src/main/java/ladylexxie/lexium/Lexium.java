@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import ladylexxie.lexium.blocks.LexiumBlocks;
 import ladylexxie.lexium.client.InitRenderTypes;
 import ladylexxie.lexium.items.LexiumItems;
+import ladylexxie.lexium.world.feature.LexiumPlacedFeatures;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,6 +24,7 @@ public class Lexium {
 
 		LexiumBlocks.register(bus);
 		LexiumItems.register(bus);
+		LexiumPlacedFeatures.register(bus);
 
 		MinecraftForge.EVENT_BUS.register(this);
 
