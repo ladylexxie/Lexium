@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xx",
+    " s",
+    " s"
+  ],
+  "key": {
+    "x": {
+      "item": "lexium:lexium_ingot"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "lexium:lexium_hoe"
+  }
+}

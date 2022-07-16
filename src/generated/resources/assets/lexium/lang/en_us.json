@@ -1,0 +1,14 @@
+{
+  "block.lexium.lexium_block": "Lexium Block",
+  "block.lexium.lexium_ore": "Lexium Ore",
+  "item.lexium.lexium_axe": "Lexium Axe",
+  "item.lexium.lexium_hoe": "Lexium Hoe",
+  "item.lexium.lexium_ingot": "Lexium Ingot",
+  "item.lexium.lexium_pickaxe": "Lexium Pickaxe",
+  "item.lexium.lexium_shovel": "Lexium Shovel",
+  "item.lexium.lexium_sword": "Lexium Sword",
+  "itemGroup.lexium_creative_tab": "Lexium",
+  "tooltip.lexium.lexium_block": "Lexium Block Tooltip",
+  "tooltip.lexium.lexium_ingot": "Lexium Ingot Tooltip",
+  "tooltip.lexium.lexium_ore": "Lexium Ore Tooltip"
+}

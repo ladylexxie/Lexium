@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "lexium:block/lexium_block"
+    }
+  }
+}
