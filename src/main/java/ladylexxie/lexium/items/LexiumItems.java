@@ -3,6 +3,9 @@ package ladylexxie.lexium.items;
 import ladylexxie.lexium.Lexium;
 import ladylexxie.lexium.LexiumCreativeTab;
 import ladylexxie.lexium.blocks.LexiumBlocks;
+import ladylexxie.lexium.items.armors.LexiumArmor;
+import ladylexxie.lexium.items.tools.*;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -11,10 +14,13 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class LexiumItems {
-	private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Lexium.MOD_ID);
+import java.util.ArrayList;
 
-	public static void register(IEventBus bus) {
+public class LexiumItems {
+	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Lexium.MOD_ID);
+	public static final DeferredRegister<Item> BLOCKITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Lexium.MOD_ID);
+
+	public static void register( IEventBus bus ) {
 		ITEMS.register(bus);
 	}
 
@@ -24,7 +30,12 @@ public class LexiumItems {
 	public static final RegistryObject<LexiumAxe> LEXIUM_AXE = ITEMS.register("lexium_axe", LexiumAxe::new);
 	public static final RegistryObject<LexiumShovel> LEXIUM_SHOVEL = ITEMS.register("lexium_shovel", LexiumShovel::new);
 	public static final RegistryObject<LexiumHoe> LEXIUM_HOE = ITEMS.register("lexium_hoe", LexiumHoe::new);
+	public static final RegistryObject<LexiumPaxel> LEXIUM_PAXEL = ITEMS.register("lexium_paxel", LexiumPaxel::new);
+	public static final RegistryObject<LexiumArmor> LEXIUM_HELMET = ITEMS.register("lexium_helmet", () -> new LexiumArmor(EquipmentSlot.HEAD));
+	public static final RegistryObject<LexiumArmor> LEXIUM_CHESTPLATE = ITEMS.register("lexium_chestplate", () -> new LexiumArmor(EquipmentSlot.CHEST));
+	public static final RegistryObject<LexiumArmor> LEXIUM_LEGGINGS = ITEMS.register("lexium_leggings", () -> new LexiumArmor(EquipmentSlot.LEGS));
+	public static final RegistryObject<LexiumArmor> LEXIUM_BOOTS = ITEMS.register("lexium_boots", () -> new LexiumArmor(EquipmentSlot.FEET));
 
-	public static final RegistryObject<Item> LEXIUM_ORE = ITEMS.register("lexium_ore", () -> new BlockItem(LexiumBlocks.LEXIUM_ORE.get(), new Item.Properties().tab(LexiumCreativeTab.TAB).rarity(Rarity.EPIC)));
-	public static final RegistryObject<Item> LEXIUM_BLOCK = ITEMS.register("lexium_block", () -> new BlockItem(LexiumBlocks.LEXIUM_BLOCK.get(), new Item.Properties().tab(LexiumCreativeTab.TAB).rarity(Rarity.EPIC)));
+	public static final RegistryObject<Item> LEXIUM_ORE = BLOCKITEMS.register("lexium_ore", () -> new BlockItem(LexiumBlocks.LEXIUM_ORE.get(), new Item.Properties().tab(LexiumCreativeTab.TAB).rarity(Rarity.EPIC)));
+	public static final RegistryObject<Item> LEXIUM_BLOCK = BLOCKITEMS.register("lexium_block", () -> new BlockItem(LexiumBlocks.LEXIUM_BLOCK.get(), new Item.Properties().tab(LexiumCreativeTab.TAB).rarity(Rarity.EPIC)));
 }

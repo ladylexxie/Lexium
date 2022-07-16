@@ -8,7 +8,10 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Arrays;
 
 public class ItemModelGen extends ItemModelProvider {
 	public ItemModelGen( DataGenerator generator, ExistingFileHelper existingFileHelper ) {
@@ -18,15 +21,9 @@ public class ItemModelGen extends ItemModelProvider {
 	@Override
 	protected void registerModels() {
 		Lexium.LOGGER.debug("Generating item model files...");
-		basicItem(LexiumItems.LEXIUM_INGOT.get());
-		basicItem(LexiumItems.LEXIUM_SWORD.get());
-		basicItem(LexiumItems.LEXIUM_HOE.get());
-		basicItem(LexiumItems.LEXIUM_AXE.get());
-		basicItem(LexiumItems.LEXIUM_PICKAXE.get());
-		basicItem(LexiumItems.LEXIUM_SHOVEL.get());
 
-		basicBlockItem(LexiumItems.LEXIUM_ORE.get());
-		basicBlockItem(LexiumItems.LEXIUM_BLOCK.get());
+		LexiumItems.ITEMS.getEntries().forEach(item -> basicItem(item.get()));
+		LexiumItems.BLOCKITEMS.getEntries().forEach(item -> basicBlockItem(item.get()));
 	}
 
 	private void basicBlockItem( Item block ) {

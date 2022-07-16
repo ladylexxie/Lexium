@@ -5,7 +5,11 @@ import ladylexxie.lexium.blocks.LexiumBlocks;
 import ladylexxie.lexium.items.LexiumItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
+import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class LangGen extends LanguageProvider {
 	public LangGen( DataGenerator gen ) {
@@ -15,12 +19,11 @@ public class LangGen extends LanguageProvider {
 	@Override
 	protected void addTranslations() {
 		Lexium.LOGGER.debug("Generating lang files...");
-		add(LexiumItems.LEXIUM_INGOT.get(), "Lexium Ingot");
-		add(LexiumItems.LEXIUM_SWORD.get(), "Lexium Sword");
-		add(LexiumItems.LEXIUM_PICKAXE.get(), "Lexium Pickaxe");
-		add(LexiumItems.LEXIUM_SHOVEL.get(), "Lexium Shovel");
-		add(LexiumItems.LEXIUM_AXE.get(), "Lexium Axe");
-		add(LexiumItems.LEXIUM_HOE.get(), "Lexium Hoe");
+
+		LexiumItems.ITEMS.getEntries().forEach(item -> {
+			String itemName = StringUtils.join(Arrays.stream(item.get().getRegistryName().getPath().split("_")).map(name -> name.substring(0, 1).toUpperCase() + name.substring(1)), " ");
+			add(item.get(), itemName);
+		});
 
 		add(LexiumBlocks.LEXIUM_ORE.get(), "Lexium Ore");
 		add(LexiumBlocks.LEXIUM_BLOCK.get(), "Lexium Block");

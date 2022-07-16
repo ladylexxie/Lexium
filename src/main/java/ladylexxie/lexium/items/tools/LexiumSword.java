@@ -1,4 +1,4 @@
-package ladylexxie.lexium.items;
+package ladylexxie.lexium.items.tools;
 
 import ladylexxie.lexium.LexiumCreativeTab;
 import ladylexxie.lexium.items.tiers.LexiumTier;

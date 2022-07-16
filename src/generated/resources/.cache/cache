@@ -1,12 +1,12 @@
 e0c858336ccb4a354072ef59228028a1e0e5de2a assets/lexium/blockstates/lexium_block.json
-9e49fc12a54f9bcb672d360ac129a2369438f2cf assets/lexium/blockstates/lexium_ore.json
-0034ba06133bdf8465a71fcebf3287ddd566cd53 assets/lexium/lang/en_us.json
+488f06906cc5f65aa3a062e0fa1942917ee74cbb assets/lexium/lang/en_us.json
 688bddd8347ad96314419c04fce47fa0ac0803d6 assets/lexium/models/block/lexium_block.json
-58bf6a64793116f29d0ed974d7ae603beb5fa96b assets/lexium/models/block/lexium_ore.json
 a3f55e9acd3e3645ce80ce054b716b382979b721 assets/lexium/models/item/lexium_axe.json
 b08fb0bd8b258835bd8337932b4999120de51a1f assets/lexium/models/item/lexium_block.json
 0a2780d4aea916dfa6a29ccdf7bb47670c779b66 assets/lexium/models/item/lexium_hoe.json
 21287d6b5d42234ee9e04040cd36f1a97a361e0b assets/lexium/models/item/lexium_ingot.json
+f7b1c76fa9400dc27e5b0c9fa89f462e7b345b41 assets/lexium/models/item/lexium_ore.json
+6834d2dcc50d2f7ad244e7171403eeb0ae155276 assets/lexium/models/item/lexium_paxel.json
 e897b0d677a15359df69bb9a61b5330663aff291 assets/lexium/models/item/lexium_pickaxe.json
 81d09aa6f0c3f4dd67240d4b8b1b046143fdc743 assets/lexium/models/item/lexium_shovel.json
 15f80c801996f4d2a4043695835ac3e65b955c3c assets/lexium/models/item/lexium_sword.json
