@@ -1,16 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "x",
-    "x",
-    "s"
+    "xxx",
+    "xxx",
+    "xxx"
   ],
   "key": {
     "x": {
       "item": "lexium:lexium_ingot"
-    },
-    "s": {
-      "item": "minecraft:stick"
     }
   },
   "result": {

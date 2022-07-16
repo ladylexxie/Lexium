@@ -1,5 +1,6 @@
 package ladylexxie.lexium.blocks;
 
+import ladylexxie.lexium.world.feature.LexiumPlacedFeatures;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.ItemStack;
@@ -19,8 +20,13 @@ public class LexiumOreBlock extends Block {
 		);
 	}
 
-	@Override
-	public void appendHoverText( ItemStack stack, @Nullable BlockGetter reader, List<Component> list, TooltipFlag flags ) {
-		list.add(new TranslatableComponent("tooltip.lexium.lexium_ore"));
-	}
+//	@Override
+//	public void appendHoverText( ItemStack stack, @Nullable BlockGetter reader, List<Component> tooltip, TooltipFlag flags ) {
+//		LexiumPlacedFeatures.LEXIUM_ORE_PLACED.
+//		RWorldGen.OreFeatureValues oreFeatureValues = RWorldGen.ORE_FEATURE_INFO_MAP.get(this.getBlock());
+//		tooltip.add(new TranslationTextComponent("Range: ")
+//				.append(": " + oreFeatureValues.minY)
+//				.append(" - " + oreFeatureValues.maxY)
+//		);
+//	}
 }

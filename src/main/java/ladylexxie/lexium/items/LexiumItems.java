@@ -19,18 +19,21 @@ import java.util.ArrayList;
 public class LexiumItems {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Lexium.MOD_ID);
 	public static final DeferredRegister<Item> BLOCKITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Lexium.MOD_ID);
+	public static final DeferredRegister<Item> TOOLS = DeferredRegister.create(ForgeRegistries.ITEMS, Lexium.MOD_ID);
 
 	public static void register( IEventBus bus ) {
 		ITEMS.register(bus);
+		BLOCKITEMS.register(bus);
+		TOOLS.register(bus);
 	}
 
 	public static final RegistryObject<LexiumIngot> LEXIUM_INGOT = ITEMS.register("lexium_ingot", LexiumIngot::new);
-	public static final RegistryObject<LexiumSword> LEXIUM_SWORD = ITEMS.register("lexium_sword", LexiumSword::new);
-	public static final RegistryObject<LexiumPickaxe> LEXIUM_PICKAXE = ITEMS.register("lexium_pickaxe", LexiumPickaxe::new);
-	public static final RegistryObject<LexiumAxe> LEXIUM_AXE = ITEMS.register("lexium_axe", LexiumAxe::new);
-	public static final RegistryObject<LexiumShovel> LEXIUM_SHOVEL = ITEMS.register("lexium_shovel", LexiumShovel::new);
-	public static final RegistryObject<LexiumHoe> LEXIUM_HOE = ITEMS.register("lexium_hoe", LexiumHoe::new);
-	public static final RegistryObject<LexiumPaxel> LEXIUM_PAXEL = ITEMS.register("lexium_paxel", LexiumPaxel::new);
+	public static final RegistryObject<LexiumSword> LEXIUM_SWORD = TOOLS.register("lexium_sword", LexiumSword::new);
+	public static final RegistryObject<LexiumPickaxe> LEXIUM_PICKAXE = TOOLS.register("lexium_pickaxe", LexiumPickaxe::new);
+	public static final RegistryObject<LexiumAxe> LEXIUM_AXE = TOOLS.register("lexium_axe", LexiumAxe::new);
+	public static final RegistryObject<LexiumShovel> LEXIUM_SHOVEL = TOOLS.register("lexium_shovel", LexiumShovel::new);
+	public static final RegistryObject<LexiumHoe> LEXIUM_HOE = TOOLS.register("lexium_hoe", LexiumHoe::new);
+	public static final RegistryObject<LexiumPaxel> LEXIUM_PAXEL = TOOLS.register("lexium_paxel", LexiumPaxel::new);
 	public static final RegistryObject<LexiumArmor> LEXIUM_HELMET = ITEMS.register("lexium_helmet", () -> new LexiumArmor(EquipmentSlot.HEAD));
 	public static final RegistryObject<LexiumArmor> LEXIUM_CHESTPLATE = ITEMS.register("lexium_chestplate", () -> new LexiumArmor(EquipmentSlot.CHEST));
 	public static final RegistryObject<LexiumArmor> LEXIUM_LEGGINGS = ITEMS.register("lexium_leggings", () -> new LexiumArmor(EquipmentSlot.LEGS));

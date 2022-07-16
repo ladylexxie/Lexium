@@ -59,7 +59,7 @@ public enum LexiumArmorMaterials implements ArmorMaterial {
 	}
 
 	public @NotNull String getName() {
-		return Lexium.MOD_NAME + ":" + this.name;
+		return Lexium.MOD_ID + ":" + this.name;
 	}
 
 	public float getToughness() {
