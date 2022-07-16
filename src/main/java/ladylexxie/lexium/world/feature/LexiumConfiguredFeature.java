@@ -12,7 +12,7 @@ import java.util.List;
 
 public class LexiumConfiguredFeature {
 	public static final List<OreConfiguration.TargetBlockState> OVERWORLD_LEXIUM_ORES = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, LexiumBlocks.LEXIUM_ORE.get().defaultBlockState()));
-			//			OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, LexiumBlocks.DEEPSLATE_LEXIUM_ORE.get().defaultBlockState()));
+	//			OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, LexiumBlocks.DEEPSLATE_LEXIUM_ORE.get().defaultBlockState()));
 
 	public static final Holder<ConfiguredFeature<OreConfiguration, ?>> LEXIUM_ORE = FeatureUtils.register("lexium_ore", Feature.ORE, new OreConfiguration(OVERWORLD_LEXIUM_ORES, 9));
 }
