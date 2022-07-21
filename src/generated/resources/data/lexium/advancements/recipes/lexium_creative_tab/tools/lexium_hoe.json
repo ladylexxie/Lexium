@@ -2,11 +2,11 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "lexium:lexium_hoe"
+      "lexium:tools/lexium_hoe"
     ]
   },
   "criteria": {
-    "has_lexium_hoe": {
+    "has_lexium_ingot": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "lexium:lexium_hoe"
+        "recipe": "lexium:tools/lexium_hoe"
       }
     }
   },
   "requirements": [
     [
-      "has_lexium_hoe",
+      "has_lexium_ingot",
       "has_the_recipe"
     ]
   ]

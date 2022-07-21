@@ -6,6 +6,7 @@ import ladylexxie.lexium.client.InitRenderTypes;
 import ladylexxie.lexium.items.LexiumItems;
 import ladylexxie.lexium.world.LexiumWorldGenEvents;
 import ladylexxie.lexium.world.feature.LexiumPlacedFeatures;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,4 +31,6 @@ public class Lexium {
 
 		DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> LexiumClient::new);
 	}
+
+	public static ResourceLocation resourceLocation( String location ) { return new ResourceLocation(MOD_ID, location); }
 }

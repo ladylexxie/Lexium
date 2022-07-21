@@ -13,9 +13,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.function.Supplier;
 
 public enum LexiumArmorMaterials implements ArmorMaterial {
-	LEXIUM("lexium", 15, new int[]{ 2, 3, 5, 3 }, 21, SoundEvents.ARMOR_EQUIP_NETHERITE, 0.5f, 0.0f, () -> {
-		return Ingredient.of(LexiumItems.LEXIUM_INGOT.get());
-	});
+	LEXIUM("lexium", 15, new int[]{ 2, 3, 5, 3 }, 21, SoundEvents.ARMOR_EQUIP_NETHERITE, 0.5f, 0.0f, () -> Ingredient.of(LexiumItems.LEXIUM_INGOT.get()));
 
 	private static final int[] HEALTH_PER_SLOT = new int[]{ 13, 15, 16, 11 };
 	private final String name;
@@ -38,35 +36,19 @@ public enum LexiumArmorMaterials implements ArmorMaterial {
 		this.repairIngredient = Lazy.of(repairIngredient);
 	}
 
-	public int getDurabilityForSlot( EquipmentSlot pSlot ) {
-		return HEALTH_PER_SLOT[pSlot.getIndex()] * this.durabilityMultiplier;
-	}
+	public int getDurabilityForSlot( EquipmentSlot pSlot ) { return HEALTH_PER_SLOT[pSlot.getIndex()] * this.durabilityMultiplier; }
 
-	public int getDefenseForSlot( EquipmentSlot pSlot ) {
-		return this.slotProtections[pSlot.getIndex()];
-	}
+	public int getDefenseForSlot( EquipmentSlot pSlot ) { return this.slotProtections[pSlot.getIndex()]; }
 
-	public int getEnchantmentValue() {
-		return this.enchantmentValue;
-	}
+	public int getEnchantmentValue() { return this.enchantmentValue; }
 
-	public @NotNull SoundEvent getEquipSound() {
-		return this.sound;
-	}
+	public @NotNull SoundEvent getEquipSound() { return this.sound; }
 
-	public @NotNull Ingredient getRepairIngredient() {
-		return this.repairIngredient.get();
-	}
+	public @NotNull Ingredient getRepairIngredient() { return this.repairIngredient.get(); }
 
-	public @NotNull String getName() {
-		return Lexium.MOD_ID + ":" + this.name;
-	}
+	public @NotNull String getName() { return Lexium.MOD_ID + ":" + this.name; }
 
-	public float getToughness() {
-		return this.toughness;
-	}
+	public float getToughness() { return this.toughness; }
 
-	public float getKnockbackResistance() {
-		return this.knockbackResistance;
-	}
+	public float getKnockbackResistance() { return this.knockbackResistance; }
 }

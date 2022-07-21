@@ -6,11 +6,11 @@
     " s"
   ],
   "key": {
-    "x": {
-      "item": "lexium:lexium_ingot"
-    },
     "s": {
       "item": "minecraft:stick"
+    },
+    "x": {
+      "item": "lexium:lexium_ingot"
     }
   },
   "result": {
