@@ -2,10 +2,8 @@ package ladylexxie.lexium;
 
 import com.mojang.logging.LogUtils;
 import ladylexxie.lexium.blocks.LexiumBlocks;
-import ladylexxie.lexium.client.InitRenderTypes;
+import ladylexxie.lexium.client.LexiumClient;
 import ladylexxie.lexium.items.LexiumItems;
-import ladylexxie.lexium.world.LexiumWorldGenEvents;
-import ladylexxie.lexium.world.feature.LexiumPlacedFeatures;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;

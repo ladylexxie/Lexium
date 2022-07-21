@@ -1,6 +1,6 @@
 package ladylexxie.lexium.items;
 
-import ladylexxie.lexium.LexiumCreativeTab;
+import ladylexxie.lexium.util.LexiumCreativeTab;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.Item;

@@ -1,6 +1,6 @@
 package ladylexxie.lexium.items.tools;
 
-import ladylexxie.lexium.LexiumCreativeTab;
+import ladylexxie.lexium.util.LexiumCreativeTab;
 import ladylexxie.lexium.items.tiers.LexiumTier;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.Item;

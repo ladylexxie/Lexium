@@ -1,7 +1,7 @@
 package ladylexxie.lexium.items;
 
 import ladylexxie.lexium.Lexium;
-import ladylexxie.lexium.LexiumCreativeTab;
+import ladylexxie.lexium.util.LexiumCreativeTab;
 import ladylexxie.lexium.blocks.LexiumBlocks;
 import ladylexxie.lexium.items.armors.LexiumArmor;
 import ladylexxie.lexium.items.tools.*;
@@ -13,8 +13,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
-import java.util.ArrayList;
 
 public class LexiumItems {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Lexium.MOD_ID);

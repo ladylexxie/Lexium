@@ -1,6 +1,6 @@
 package ladylexxie.lexium.items.armors;
 
-import ladylexxie.lexium.LexiumCreativeTab;
+import ladylexxie.lexium.util.LexiumCreativeTab;
 import ladylexxie.lexium.items.tiers.LexiumArmorMaterials;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
