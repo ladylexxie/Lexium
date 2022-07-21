@@ -1,4 +1,4 @@
-package ladylexxie.lexium;
+package ladylexxie.lexium.util;
 
 import ladylexxie.lexium.items.LexiumItems;
 import net.minecraft.world.item.CreativeModeTab;

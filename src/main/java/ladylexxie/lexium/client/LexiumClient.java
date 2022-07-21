@@ -1,4 +1,4 @@
-package ladylexxie.lexium;
+package ladylexxie.lexium.client;
 
 import ladylexxie.lexium.client.InitRenderTypes;
 import net.minecraftforge.api.distmarker.Dist;
